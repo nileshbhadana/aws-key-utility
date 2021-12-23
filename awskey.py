@@ -27,7 +27,7 @@ def updateKeys(newAccessKeyId,newSecret):
         config.write(fp)
         fp.close()
     except Exception as e:
-        shutil.copy2(path,pathBackup)
+        shutil.copy2(pathBackup,path)
         logger.error("Unexpected Error: {}".format(e.response['Error']['Message']))
 
 def getOldKey():
