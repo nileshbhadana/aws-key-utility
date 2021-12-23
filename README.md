@@ -2,14 +2,14 @@
 
 ## Installation
 
-```console
-    git clone https://github.com/nileshbhadana/aws-key-utility.git
-```
-```console
-    cd aws-key-utility/
-    chmod +x ./setup.sh
-    ./setup.sh
-```
+    ```console
+        git clone https://github.com/nileshbhadana/aws-key-utility.git
+    ```
+    ```console
+        cd aws-key-utility/
+        chmod +x ./setup.sh
+        ./setup.sh
+    ```
 ## Usage:
 
 - List AWS your keys:
@@ -29,6 +29,6 @@
     ```
 
 - Delete AWS Access key:
-```console
-    awskey --delete <ACCESS KEY ID>
-```
+    ```console
+        awskey --delete <ACCESS KEY ID>
+    ```
