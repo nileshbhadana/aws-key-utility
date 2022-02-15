@@ -1,13 +1,20 @@
 #!/usr/local/bin/python3
 import boto3
-import argparse, os
-from devops_commons.logging import get_logger
+import argparse, os, sys
 import logging
 import configparser
 import shutil
 
-logger = get_logger("AWS Key")
-logging.getLogger().setLevel(logging.INFO)
+stdout_handler = logging.StreamHandler(sys.stdout)
+handlers = [stdout_handler]
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='[%(asctime)s] {%(filename)s:%(lineno)d} %(levelname)s - %(message)s',
+    handlers=handlers
+)
+logger = logging.getLogger('LOGGER_NAME')
+logger.setLevel(logging.DEBUG)
 
 
 def updateKeys(newAccessKeyId,newSecret):
